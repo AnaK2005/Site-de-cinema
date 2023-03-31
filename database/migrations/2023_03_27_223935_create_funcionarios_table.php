@@ -16,9 +16,9 @@ return new class extends Migration
             $table->timestamps();
             $table->string('emailfun');
             $table->string('nomefun'); 
-            $table->string('senhar'); 
-            $table->string('whatsapp');
-            $table->string('cpf'); 
+            $table->string('senhafun'); 
+            $table->string('whatsappfun');
+            $table->string('cpffun'); 
         });
     }
 
