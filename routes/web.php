@@ -21,13 +21,15 @@ Route::get('/', function () {
     return view('home');
 });
 
-Route::get('/cadastro-filme',[cadastroFilme::class,'buscaCadastroFilme'])->name('buscar-cadastro-filme');
+Route::get('/cadastro-filme',[cadastroFilme::class,'buscaCadastroFilme'])->name('cadastro-filme');
 
 Route::get('/cadastro-funcionario',[cadastroFuncionario::class,'buscaCadastroFuncionario']);
 
 Route::get('/cadastro-sala',[cadastroSala::class,'buscaCadastroSala']);
 
 Route::post('/cadastro-funcionario',[cadastroFuncionario::class, 'cadastrarFuncionario'])->name('cadastro-funcionario'); 
+
+Route::post('/cadastro-filme',[cadastroFilme::class, 'cadastrarFilme'])->name('cadastro-filme'); 
 
 
 
