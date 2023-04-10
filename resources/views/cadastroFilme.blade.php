@@ -2,7 +2,7 @@
 
 @section('content') 
 
-  <form method = "post" action="{{route('cadastro-filme')}}">
+  <form method = "post" action="{{route('cadastro-filme')}}" enctype = "multipart/form-data">
 
     @csrf 
     
@@ -21,6 +21,10 @@
     <div class="mb-3 form-check">
       <label for="sinopseInput" class="form-label">Sinopse:</label>
       <textarea class="form-control" name="sinopsefilme" id="sinopseInput" rows="3"></textarea>
+    </div>
+    <div class="mb-3 form-check">
+      <label for="capaInput" class="form-label">Capa:</label>
+      <input name="capafilme" class="form-control" type="file" id="capaInput">
     </div>
     <button type="submit" class="btn btn-primary">Salvar</button>
   </form>

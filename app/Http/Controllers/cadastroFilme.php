@@ -20,11 +20,17 @@ class cadastroFilme extends Controller
             'atoresfilme'=> 'string|required',
             'dtlancamentofilme' => 'string|required',
             'sinopsefilme' => 'string|required',
+            'capafilme' => 'file|required',
         ]);
+        //  dd($dadosFilme); 
+
+        $file = $dadosFilme['capafilme'];
+        $path = $file -> store('capa', 'public'); 
+        $dadosFilme['capafilme'] = $path; 
 
         Filme::create($dadosFilme); 
 
-        return Redirect::route('cadastro-filme');
+       // return Redirect::route('cadastro-filme');
 
         
 
