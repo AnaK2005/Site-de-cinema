@@ -19,11 +19,11 @@ use App\Http\Controllers\cadastroSala;
 
 Route::get('/', function () {
     return view('home');
-});
+})->name('home');
 
 Route::get('/cadastro-filme',[filmeController::class,'buscaCadastroFilme'])->name('cadastro-filme');
 
-Route::get('/cadastro-funcionario',[funcionarioController::class,'buscaCadastroFuncionario']);
+Route::get('/cadastro-funcionario',[funcionarioController::class,'buscarCadastroFuncionario']);
 
 Route::get('/cadastro-sala',[cadastroSala::class,'buscaCadastroSala']);
 
@@ -31,5 +31,4 @@ Route::post('/cadastro-funcionario',[funcionarioController::class, 'cadastrarFun
 
 Route::post('/cadastro-filme',[filmeController::class, 'cadastrarFilme'])->name('cadastro-filme'); 
 
-Route::get('/gerenciar-funcionario',[funcionarioController::class, 'buscarFuncionario'])->name('gerenciar-funcionario');
-
+Route::get('/gerenciar-funcionario',[funcionarioController::class,'MostrarGerenciadorFuncionario'])->name('gerenciar-funcionario');
