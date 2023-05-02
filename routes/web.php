@@ -32,3 +32,10 @@ Route::post('/cadastro-funcionario',[funcionarioController::class, 'cadastrarFun
 Route::post('/cadastro-filme',[filmeController::class, 'cadastrarFilme'])->name('cadastro-filme'); 
 
 Route::get('/gerenciar-funcionario',[funcionarioController::class,'MostrarGerenciadorFuncionario'])->name('gerenciar-funcionario');
+
+Route::delete('/gerenciar-funcionario/{registroFuncionario}',[funcionarioController::class, 'ApagarFuncionario'])->name('apagar-funcionario');
+
+Route::get('/alterar-funcionario/{registroFuncionario}',[funcionarioController::class,'MostrarRegistroFuncionario'])->name('mostrar-funcionario');
+
+Route::put('/garenciar-funcionario/{registroFuncionario}',[funcionarioController::class,'AlterarBancoFuncionario'])->name('alterar-banco-funcionario');
+
