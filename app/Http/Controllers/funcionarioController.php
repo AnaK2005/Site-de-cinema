@@ -26,9 +26,9 @@ class funcionarioController extends Controller
         return Redirect::route('home');
     }
 
-    /*public function buscarFuncionario(){
+    public function buscarFuncionario(){
         return view('gerenciadorFuncionario',['dadosfuncionario']);
-    }*/     
+    }   
 
     public function MostrarGerenciadorFuncionario(Request $request){
         $dadosfuncionarios = Funcionario::all();
