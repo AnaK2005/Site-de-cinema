@@ -30,9 +30,52 @@ class filmeController extends Controller
 
         Filme::create($dadosFilme); 
 
-       // return Redirect::route('cadastro-filme');
+       return Redirect::route('cadastro-filme');
 
         
 
     }
+
+    public function buscarFilme(){
+        return view('gerenciadorFilme',['dadosfilme']);
+    }   
+
+  
+
+    public function MostrarGerenciadorFilme(Request $request){
+        //$dadosfuncionarios = Funcionario::all();
+
+        //dd($dadosfuncionarios);
+
+       $dadosfilme = Filme::query();
+       $dadosfilme->when($request->nomefilme,function($query,$nomefilme ){
+           $query->where('nomefilme','like','%'.$nomefilme.'%');
+       }); 
+       $dadosfilme = $dadosfilme->get();
+
+        return view('gerenciadorFilme',['dadosfilme'=>$dadosfilme]);
+        
+    }
+
+  
+        
+    public function MostrarRegistroFilme(Request $request){
+        $dadosfilme = Filme::all(); 
+        dd($dadosfilme);
+
+        $dadosfilme = Filme::query(); 
+        $dadosfilme->when($request->nomefilme,function($query,$nomefilme){
+            $query->where('nomefilme','like','%'.$nomefilme.'%');
+    });                 
+    }
+
+    public function ApagarFilme(Filme $registroFilme){
+
+
+
+        $registroFilme->delete();
+
+        return Redirect::route('gerenciar-filme');
+    }
+
 }
