@@ -8,8 +8,9 @@
       </div>
       <div class="modal-body text-dark">
 
-      <form method = "post" action="{{route('cadastro-filme')}}" enctype = "multipart/form-data">
+      <form method = "post" action="{{route('alterar-banco-filme',$dadosfilme->id)}}" enctype = "multipart/form-data">
 
+        @method('PUT')
         @csrf 
 
         <div class="mb-3 form-check">

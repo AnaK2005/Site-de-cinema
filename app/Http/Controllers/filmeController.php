@@ -78,4 +78,19 @@ class filmeController extends Controller
         return Redirect::route('gerenciar-filme');
     }
 
+    public function AlterarBancoFilme(Filme $registroFilme, Request $request){
+        $dadosfilme = $request->validate([
+            'nomefilme' => 'string|required',
+            'atoresfilme'=> 'string|required',
+            'dtlancamentofilme' => 'string|required',
+            'sinopsefilme' => 'string|required',
+            'capafilme' => 'file|required',
+        ]);        
+        
+        $registroFilme->fill($dadosfilme); 
+        $registroFilme->save();
+        return Redirect::route('gerenciar-filme');    
+
+        }
+
 }
