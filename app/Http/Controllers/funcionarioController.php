@@ -62,6 +62,22 @@ class funcionarioController extends Controller
         return Redirect::route('gerenciar-funcionario');
     }
 
+    public function AlterarBancoFuncionario(Funcionario $registroFuncionario, Request $request){
+        $dadosfuncionarios = $request->validate(
+            [
+                'emailfun'=> 'string|required',
+                'nomefun'=> 'string|required',
+                'senhafun'=> 'string|required',
+                'whatsappfun'=> 'string|required',
+                'cpffun'=> 'string|required'
+            ]
+            );    
+        $registroFuncionario->fill($dadosfuncionarios); 
+        $registroFuncionario->save();
+        return Redirect::route('gerenciar-funcionario');    
+
+        }
+
 
 
 }

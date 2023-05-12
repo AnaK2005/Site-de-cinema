@@ -8,8 +8,9 @@
       </div>
       <div class="modal-body text-dark">
 
-<form method = "post" action="{{route('cadastro-funcionario')}}">
+<form method = "post" action="{{route('alterar-banco-funcionario',$dadosfuncionarios->id)}}">
 
+    @method('PUT')
     @csrf
             <div class="mb-3 form-check">
                 <label for="nomeInput" class="form-label">Nome:</label>
