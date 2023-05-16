@@ -40,7 +40,7 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sala/Poltrona</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sessão</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="/cadastro-sala">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="#">Pesquisar</a></li>
