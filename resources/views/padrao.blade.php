@@ -40,12 +40,12 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sessão</a>
+                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sala/Poltrona</a>
                 <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="/cadastro-sala">Cadastrar</a></li>
-                    <li><a class="dropdown-item" href="#">Pesquisar</a></li>
-                    <li><a class="dropdown-item" href="#">Gerenciar</a></li>
+                    <li><a class="dropdown-item" href="{{'/cadastro-poltrona'}}">Cadastrar</a></li>
+                    <li><a class="dropdown-item" href="{{'/gerenciar-poltrona'}}">Gerenciar</a></li>
                 </ul>
+              </li>
               </li>
             </ul>
           </div>

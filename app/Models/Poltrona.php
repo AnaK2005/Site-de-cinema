@@ -5,7 +5,13 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class cadastroSala extends Model
+class Poltrona extends Model
 {
     use HasFactory;
+
+    protected $fillable =[
+        'numpol', 'nomeclie'
+    ];
 }
+
+?>
