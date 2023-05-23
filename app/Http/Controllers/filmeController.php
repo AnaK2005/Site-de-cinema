@@ -93,4 +93,13 @@ class filmeController extends Controller
 
         }
 
+    public function MostrarFilme(Request $request){
+
+        $dadosfilme = Filme::query();
+        $dadosfilme = $dadosfilme->get();
+
+        return view('home',['dadosfilme'=>$dadosfilme]);
+        
+    }
+
 }

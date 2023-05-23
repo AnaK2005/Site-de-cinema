@@ -39,17 +39,6 @@ form
             <label for="recipient-name" class="col-form-label">Nome do cliente:</label>
             <input type="text" class="form-control" name="nomeclie" id="recipient-name" required>
           </div>
-          <div>
-            @include_once('filmeController')
-          <select class="form-select" aria-label="Default select example">
-            <option selected>Selecione o filme</option>
-
-            @foreach($dadosfilme as $dadosfilme)
-            <option value="{{$dadosfilme->nomefilme}}">{{$dadosfilme->nomefilme}}</option>
-            @endforeach 
- 
-          </select>
-          </div>
           <div class="mb-3">
             <label for="message-text" class="col-form-label">Número da poltrona</label>
             <input type="text" class="form-control" value="{{$i}}" name="numpol" id="message-text" readonly required>
