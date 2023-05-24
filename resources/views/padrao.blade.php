@@ -10,26 +10,33 @@
     <link href="https://fonts.googleapis.com/css2?family=Secular+One&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <link type="text/css" rel="stylesheet" href="{{ asset('css/app.css') }}"/>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&family=Poppins:ital,wght@0,500;1,700&display=swap" rel="stylesheet">
+
     <title>Cinema Adm</title>
 </head>
-<body>
+<body style="background-image: {{asset('/public/imagens/fundo.jpg')}}">
 <header>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark" aria-label="Tenth navbar example">
         <div class="container-fluid">
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarsExample08" aria-controls="navbarsExample08" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a  href="{{url('/')}}"><img src="{{ asset('imagens/logo.png') }}" alt="Bootstrap" width="120" height="76"></a> 
+          <a  href="{{url('/')}}"><img src="{{ asset('imagens/logo.png') }}" alt="Bootstrap" width="120" height="80"></a> 
     
           <div class="collapse navbar-collapse justify-content-md-center" id="navbarsExample08">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="{{url('/')}}">Cinema da Etec</a>
+                <a class="nav-link active fs-4 fw-semibold " aria-current="page" href="{{url('/')}}">Home</a>
               </li>
               
               
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Filme</a>
+                <a class="nav-link dropdown-toggle fs-4 fw-semibold ms-4" href="#" data-bs-toggle="dropdown" aria-expanded="false">Filme</a>
                 <ul class="dropdown-menu">
                   <li><a class="dropdown-item" href="{{url('/cadastro-filme')}}">Cadastrar</a></li>
                   <li><a class="dropdown-item" href="#">Pesquisar</a></li>
@@ -38,7 +45,7 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</a>
+                <a class="nav-link dropdown-toggle fs-4 fw-semibold ms-4" href="#" data-bs-toggle="dropdown" aria-expanded="false">Funcionário</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{url('/cadastro-funcionario')}}">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="{{url('/gerenciar-funcionario')}}">Gerenciar</a></li>
@@ -46,7 +53,7 @@
               </li>
 
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sala/Poltrona</a>
+                <a class="nav-link dropdown-toggle fs-4 fw-semibold ms-4" href="#" data-bs-toggle="dropdown" aria-expanded="false">Sessão</a>
                 <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="{{'/cadastro-poltrona'}}">Cadastrar</a></li>
                     <li><a class="dropdown-item" href="{{'/gerenciar-poltrona'}}">Gerenciar</a></li>

@@ -85,7 +85,11 @@ class filmeController extends Controller
             'dtlancamentofilme' => 'string|required',
             'sinopsefilme' => 'string|required',
             'capafilme' => 'file|required',
-        ]);        
+        ]);
+        
+        $file = $dadosfilme['capafilme'];
+        $path = $file -> store('capa', 'public'); 
+        $dadosfilme['capafilme'] = $path; 
         
         $registroFilme->fill($dadosfilme); 
         $registroFilme->save();

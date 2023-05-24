@@ -1,6 +1,8 @@
 body{
-    background-color: #150050; 
+    background-color: #000; 
+
 }
+
 
 .legenda, p{
     color: #fff; 
@@ -9,6 +11,15 @@ body{
 
 p{
     text-align: justify;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+}
+
+h1{
+    color: #fff; 
+    text-align: center;
+    padding: 5%;
+    font-family: 'Poppins', sans-serif;
 }
 
 .formpreencher{
