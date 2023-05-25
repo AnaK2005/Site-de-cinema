@@ -26,7 +26,7 @@ form
 @csrf
 
 <div class = "d-flex p-2 justify-content-between">
-<input type="button" class="btn btn-dark" name="minhaEntrada" value="{{$i}}"  data-bs-target="#exampleModal{{$i}}" data-bs-toggle="modal" data-valor="{{ $i }}">
+<input type="button" class="btn btn-dark btnpoltrona" name="minhaEntrada" value="{{$i}}"  data-bs-target="#exampleModal{{$i}}" data-bs-toggle="modal" data-valor="{{ $i }}">
 
 <div class="modal fade" id="exampleModal{{$i}}" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">

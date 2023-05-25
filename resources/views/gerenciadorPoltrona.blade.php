@@ -7,7 +7,7 @@
   <div class="mb-3 row">
     <label for="inputPesquisar" class="col-sm-2 col-form-label">Pesquisar:</label>
     <div class="col-sm-8">
-      <input type="text" class="form-control" name="numpol" id="inputPesquisar" placeholder="Digite o número da poltrona ou o nome" >
+      <input type="text" class="form-control" name="nomeclie" id="inputPesquisar" placeholder="Digite o nome do cliente" >
     </div>
     <div class="col-sm-2"> <button type="submit" class="btn btn-outline-primary">Pesquisar</button> </div>
   </div>
@@ -27,7 +27,7 @@
 
 
      
-    @if(empty($_GET['numpol']))
+    @if(empty($_GET['nomeclie']))
    
     @else
     

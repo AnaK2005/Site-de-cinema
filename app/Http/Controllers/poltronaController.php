@@ -30,11 +30,11 @@ class poltronaController extends Controller
 
     // Tenho que criar a página que irá mostrar as poltronas para isto funcionar.
     public function MostrarGerenciadorPoltrona(Request $request){
-        //$dadospoltronas = Poltrona::all();
+        $dadospoltronas = Poltrona::all();
        // dd($dadosfuncionarios);
 
         $dadospoltronas = Poltrona::query();
-        $dadospoltronas->when($request->clie,function($query,$nomecliente ){
+        $dadospoltronas->when($request->nomeclie,function($query,$nomecliente ){
             $query->where('nomeclie','like','%'.$nomecliente.'%');
         }); 
 
