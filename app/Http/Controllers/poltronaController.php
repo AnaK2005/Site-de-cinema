@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Http\Request;
 use App\Models\Poltrona;
-use http\Controller\filmeController;
+
 
 class poltronaController extends Controller
 {
@@ -21,23 +21,16 @@ class poltronaController extends Controller
                 'numpol'=> 'string|required',
                 'nomeclie'=> 'string|required'
             ]
-
             );
 
         Poltrona::create($dadospoltronas);
-
-        $dadosfuncionarios = Funcionario::query();
-        function($query,$nomefuncionario ){
-            $query->where('nomefun','like','%'.$nomefuncionario.'%');
-        }; 
-        $dadosfuncionarios = $dadosfuncionarios->get();
- 
         return Redirect::route('home');
     }
 
 
+    // Tenho que criar a página que irá mostrar as poltronas para isto funcionar.
     public function MostrarGerenciadorPoltrona(Request $request){
-        $dadospoltronas = Poltrona::all();
+        //$dadospoltronas = Poltrona::all();
        // dd($dadosfuncionarios);
 
         $dadospoltronas = Poltrona::query();
@@ -47,10 +40,14 @@ class poltronaController extends Controller
 
         $dadospoltronas = $dadospoltronas->get();
         
+//ALTERAR ISSO. (Feito).
         return view('gerenciadorPoltrona',['dadospoltrona'=>$dadospoltronas]);
         
     }
 
+    public function buscarPoltrona(){
+        return view('gerenciadorPoltrona',['dadospoltrona']);
+    }  
 
 
     public function ApagarPoltrona(Poltrona $registrosPoltronas){
